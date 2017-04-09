@@ -1,0 +1,22 @@
+state model 状态模型：  在一个helix集群中，可以存在多个state model。每一个资源都要配置一个state model以管理他们的ideal state.
+	三个最常见的状态模型：
+		mater-slave
+		online-offline
+		leader-standby
+
+helix architecture helix 架构
+	why: 
+	what： 管理集群中的各种组件.提供一种机制协调集群中的各个node和component.  反映集群中的各种变化，形成一系列可以使集群达到稳定状态的任务，这些任务将分配到集群的各个node.
+	how: 
+
+role 角色
+	participant // hosting 资源
+	spectator // 获取current state 主要进行request route
+	controller // 负责核心的协调功能
+
+每个分区一个state，每一个state一个constrain（constrain理解：比如，成为一个MASTER状态前一个状态必须是SLAVE）
+不进每一个state有constrain，每一个transition都有constrain
+
+
+Algorithm suan
+
