@@ -1,0 +1,18 @@
+
+Netty系列之Netty安全性
+  http://www.infoq.com/cn/articles/netty-security
+
+Nginx配置upstream实现负载均衡
+  http://favccxx.blog.51cto.com/2890523/1622091
+  
+关于TCP_NODELAY 和 TCP_CORK选项
+  http://www.cnblogs.com/maowang1991/archive/2013/04/16/3024518.html
+  
+使用nginx sticky实现基于cookie的负载均衡
+  http://www.ttlsa.com/nginx/nginx-modules-nginx-sticky-module/
+  
+关于netty-tcnative项目：
+  https://github.com/trustin/os-maven-plugin
+
+tomcat集群化
+  http://wiki.jikexueyuan.com/project/tomcat/clustering.html
