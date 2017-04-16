@@ -1,18 +1,20 @@
-
-Nettyç³»åˆ—ä¹‹Nettyå®‰å…¨æ€§
+NettyÏµÁĞÖ®Netty°²È«ĞÔ
   http://www.infoq.com/cn/articles/netty-security
 
-Nginxé…ç½®upstreamå®ç°è´Ÿè½½å‡è¡¡
+NginxÅäÖÃupstreamÊµÏÖ¸ºÔØ¾ùºâ
   http://favccxx.blog.51cto.com/2890523/1622091
   
-å…³äºTCP_NODELAY å’Œ TCP_CORKé€‰é¡¹
+¹ØÓÚTCP_NODELAY ºÍ TCP_CORKÑ¡Ïî
   http://www.cnblogs.com/maowang1991/archive/2013/04/16/3024518.html
   
-ä½¿ç”¨nginx stickyå®ç°åŸºäºcookieçš„è´Ÿè½½å‡è¡¡
+Ê¹ÓÃnginx stickyÊµÏÖ»ùÓÚcookieµÄ¸ºÔØ¾ùºâ
   http://www.ttlsa.com/nginx/nginx-modules-nginx-sticky-module/
   
-å…³äºnetty-tcnativeé¡¹ç›®ï¼š
+¹ØÓÚnetty-tcnativeÏîÄ¿£º
   https://github.com/trustin/os-maven-plugin
 
-tomcaté›†ç¾¤åŒ–
+tomcat¼¯Èº»¯
   http://wiki.jikexueyuan.com/project/tomcat/clustering.html
+
+Git-ÖĞÎÄÂÒÂëÎÊÌâ  
+https://segmentfault.com/a/1190000000578037

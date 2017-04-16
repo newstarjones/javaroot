@@ -1,0 +1,46 @@
+题目：
+http://www.banzg.com/archives/639.html
+http://mm.fancymore.com/reading/Java-interview-jvm-mode1.html
+https://www.oschina.NET/translate/java-interview-questions-and-answers
+
+调优：
+http://ifeve.com/java-performance-tuning-survey-results-part-ii/
+http://www.importnew.com/22653.html
+http://www.importnew.com/22401.html
+
+并发：
+http://www.cnblogs.com/icejoywoo/archive/2012/10/15/2724674.html
+http://www.programcreek.com/2009/02/notify-and-wait-example/
+http://stackoverflow.com/questions/2779484/why-must-wait-always-be-in-synchronized-block
+
+两个有序数组的排序
+采用插入排序，插入排序对有序数组效率极高
+http://bubkoo.com/2014/01/15/sort-algorithm/merge-sort/  归并排序
+
+霍夫曼编码(HUFFMAN编码) //用于编码和压缩
+http://coolshell.cn/articles/7459.html
+
+session同步问题
+http://blog.51yip.com/server/922.html
+http://www.cnblogs.com/moonandstar08/p/5582281.html
+
+二维码生成细节与原理
+http://coolshell.cn/articles/10590.html
+
+字符串常量池问题
+1 字符串常量池是堆中的一个部分，为JVM节省了空间
+2 所有的字符串字面量和基于字符串的表达式都会被interned，即进入到字符串常量池中
+3 String s = new String("abc");  其中new出来的对象位于堆中，但是"abc"还是在常量池中
+http://www.journaldev.com/797/what-is-java-string-pool
+
+
+HTTPS:
+http://www.techug.com/post/https-ssl-tls.html
+http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html
+http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html
+
+
+spring AOP：
+https://www.ibm.com/developerworks/cn/java/j-lo-springaopcglib/
+https://wangchangchung.github.io/2016/11/11/Spring%E7%9A%84%E4%BA%8B%E5%8A%A1%E6%9E%B6%E6%9E%84/
+http://blog.csdn.net/hjm4702192/article/details/17277669
