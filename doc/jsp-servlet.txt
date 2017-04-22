@@ -1,0 +1,5 @@
+
+http://attic.apache.org/projects/jakarta.html
+jakarta
+Founded in 1999, the Jakarta Project housed a diverse set of popular open source Java solutions. In December 2011, 
+Jakarta was retired as all of its subprojects had either become their own projects or been retired. 
