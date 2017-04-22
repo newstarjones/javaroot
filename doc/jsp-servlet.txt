@@ -3,3 +3,21 @@ http://attic.apache.org/projects/jakarta.html
 jakarta
 Founded in 1999, the Jakarta Project housed a diverse set of popular open source Java solutions. In December 2011, 
 Jakarta was retired as all of its subprojects had either become their own projects or been retired. 
+
+jakarta jsp taglib// jakarta实现了一套jsp自定义标签，比标准的更好用.
+
+jsp页面的国际化
+https://www.ibm.com/developerworks/cn/java/j-jspapp/
+
+jee6 Tutorial
+http://docs.oracle.com/javaee/6/tutorial/doc/gjbbk.html
+
+
+服务复杂且集群规模扩大后，阿里妈妈怎样提升部署和构建效率？
+http://www.infoq.com/cn/articles/alimama-enhance-deployment-and-construction-efficiency
+
+去哪儿网机票搜索系统的高并发架构设计
+http://www.infoq.com/cn/articles/qunar-ticket-search-system
+
+火力全开：大数据领域2017年全景剖析
+http://www.infoq.com/cn/articles/the-2017-big-data-landscape
