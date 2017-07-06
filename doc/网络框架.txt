@@ -1,0 +1,6 @@
+mina和netty性能
+http://blog.csdn.net/mindfloating/article/details/8622930
+
+netty作代理服务器达到100K连接
+http://rdc.gleasy.com/%E5%A6%82%E4%BD%95%E5%81%9A%E5%88%B0c100k_1.html
+

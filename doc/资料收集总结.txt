@@ -17,7 +17,8 @@ activiemq 大消息丢失？
 
 解决方式：设置wireFormat.maxInactivityDuration=0或者更大的值。
 
-    原因：在connection可用时（如客户端在发一个大消息，这里的可用要再思考下含义），broker等待maxInactivityDuration时间后还未收到消息，将主动关闭该连接,这时导致消息丢失。
+原因：在connection可用时（如客户端在发一个大消息，这里的可用要再思考下含义），broker等待maxInactivityDuration时间
+    后还未收到消息，将主动关闭该连接,这时导致消息丢失。
 
 参考文章：http://activemq.apache.org/slow-networks-drop-large-messages.html
 

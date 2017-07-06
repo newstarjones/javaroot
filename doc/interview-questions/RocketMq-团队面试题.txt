@@ -1,0 +1,105 @@
+https://github.com/alibaba/RocketMQ/wiki/external-articles
+http://blog.csdn.net/fengjia10/article/details/6927984
+
+ 企业是如何选拨高素质工程师（高级软件工程师or架构师）的?除了脑筋急转弯那种简单的开场白外，还需要更专业，更深邃的交流。这里，我把自己平时的思考备案分享给大家，欢迎讨论~
+基础技术篇（数据结构，并发编程，JVM内存调优等）
+1. 谈谈对队列offer，poll，peek操作的理解（实现，算法复杂度）
+2. 谈谈对HashMap，ConcurrentHashMap，ConcurrentLinkedQueue，AbstractQueuedSynchronizer的理解（实现，核心操作，算法复杂度，使用场景）
+
+
+3. 谈谈对字符集的理解
+	字库表  字符编码   编码字符集
+	http://cenalulu.github.io/linux/character-encoding/
+	
+
+4. 谈谈对NIO编程模型的理解
+	非阻塞IO：指程序读写时不会阻塞，能读则读，不能则直接返回
+	同步/异步 IO：
+	按照unix网络编程一书的说法：所有同步IO都会导致调用程序的阻塞，只有异步IO才是非阻塞的。 (这里的阻塞非阻塞是指IO读写是否阻塞，显然通常的IO读写都是阻塞的
+	只有异步IO的读写是非阻塞的，因为他的读写动作在通知到程序逻辑时已经完成)
+	而java里的非阻塞是说，读写IO会立即返回，不会等待的意思。 注意这里和上面的不同
+	
+	
+5. 谈谈TCP网络编程可能会遇到的问题
+
+
+6. 谈谈对序列化的理解
+
+
+7. 谈谈对softReference,weakReference,PhantomReference的理解
+	
+
+	
+8. 谈谈对异常的理解
+9.谈谈对设计模式的理解
+10.谈谈对类加载器原理的理解，child first/parent first模型优缺点如何？
+11.谈谈对ASM的理解
+12.谈谈JVM调优经验
+13. Maven的phase,goal有什么区别?lifecycle呢?Git是如何pull request的
+
+全局统筹篇（技术深度，广度，前沿技术敏感度，工作习惯，架构观）
+1. 工作中,除了对J2SE libarary的使用外,你还会用到哪些工具库?(脚手架问题，用好了极大提升效率，也可考察出其知识面)选择这些库的标准是?举几个简单例子吧
+	JSON库   Jackson  Google Gson  FastJson
+	Apache Commons Lang/IO (commons-lang和common-lang3)/codec
+	Google Guava
+
+2. 精度丢失的问题,遇到过吗?(float,double,BigDecimal) 如何避免？
+	
+3. 序列化中需要注意什么问题?对时间的序列化,又需要考虑什么?
+	读effective java
+	
+4. Apache,Ngix,Lighttpd怎么解决高并发访问的?采用什么模型？优缺点是?如何调优?poll,select,epoll模型在各个web server中的实现情况?
+	Apache每请求每线程方式
+	Nginx和Lighttpd都采用epoll模型，区别在于Nginx采用了边缘触发，而Lighttpd没有
+	更详细的要读相关代码才能更好的理解。
+	
+	
+
+5. Memcached 是分布式缓存,还是集中式缓存?实施中需要注意什么问题?
+	简单的文本协议
+	采用libevent是个程序库，它将Linux的epoll、BSD类操作系统的kqueue等事件处理功能封装成统一的接口
+	未考虑数据持久性问题，服务重启数据丢失
+	服务端没有分布式功能，全靠客户端去实现
+		
+6. 工作中,设计模式用的多吗?怎么用?visitor模式应用中需要注意些啥?
+	目标：分离类和具体操作，使得操作可以随意增减
+	不改变类体系的情况下，增加类的行为。
+	具体做法，形成Visitor继承体系，定义一个visitor方法, 每个动作一个Visitor类，该Visitor类中提供多个visit+各个类的方法
+	所有的类提供accept(Visitor)方法接受访问者
+	
+	Visitor最大的问题：考虑是类体系还是类上的算法，谁的变化更大。如果前者变化大，那么没必要把动作分离出来； 如果后者变化大，那么可以visitor模式是很好的.
+	
+	
+	
+
+7. 谈谈你对架构的理解。工作中,你是如何去架构设计一些系统的?(可以从基础框架方面谈起，也可以谈谈是如何帮助团队成员做设计评审的)
+8. 架构vs.设计?如果让你设计一个IOC容器，如何用优雅的架构保证你的设计?
+
+9. 并发编程中需要注意些什么?哪种情况下线程可以Reentrant?如何优雅的结束线程?啪啦啪啦一堆堆问题
+
+
+10. Reactor模式和Proactor模式了解多少,web server中有哪几种高性能IO模式?
+	
+
+
+11. 曾经参与过或者分析过哪些开源框架，带给你最大的感受是什么？
+12  如果公司让你设计一套应用监控平台（Java平台），你觉得会碰到哪些技术难点（架构或细节层面均可谈谈。可以谈谈Java agent技术）？
+13. 谈谈你对consistent hashing algorithm的理解,如何设置虚拟节点,如何选择hash算法(更高的命中率,有效的故障转移)?
+
+
+
+14. 归并排序,堆排序工作中有用到吗?如何应用的?
+15. 谈谈你sql优化方面的经验?可以从执行计划谈起,对choose,rule.cost进行剖析
+
+敏捷流程篇（团队建设，人才培育，基础建设）
+1. 敏捷思想能为你工作中带来什么?怎么理解coding-pair的?
+2. 人，而不是流程或方法决定了软件开发过程的成功,谈谈你的看法?
+3. 用JIRA来跟踪管理我们的问题和需求；用Confluence来聚集团队的想法、计划和知识?在此过程中,你遇到了哪些问题;
+4. 持续集成,版本控制方面,你是如何做的?
+5. 你是如何推进项目执行的？
+6. 招聘是一个请进来的过程，为了找到更靠谱的人才，你的做法是？请进来之后，又是如何帮助他们成长的？
+
+参考文献:
+1.http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
+2.http://www.openwebx.org/docs/autoconfig.html
+3.http://mojo.codehaus.org/

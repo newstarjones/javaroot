@@ -3,6 +3,9 @@ http://www.banzg.com/archives/639.html
 http://mm.fancymore.com/reading/Java-interview-jvm-mode1.html
 https://www.oschina.NET/translate/java-interview-questions-and-answers
 
+
+https://www.bbsmax.com/A/Ae5RMA8JQ9/ 有答案，可以更好地参考
+
 调优：
 http://ifeve.com/java-performance-tuning-survey-results-part-ii/
 http://www.importnew.com/22653.html
@@ -44,3 +47,93 @@ spring AOP：
 https://www.ibm.com/developerworks/cn/java/j-lo-springaopcglib/
 https://wangchangchung.github.io/2016/11/11/Spring%E7%9A%84%E4%BA%8B%E5%8A%A1%E6%9E%B6%E6%9E%84/
 http://blog.csdn.net/hjm4702192/article/details/17277669
+
+
+
+搜狗面试题1道：
+http://www.oschina.net/question/554705_55753?sort=time&p=1
+
+kafka基本知识
+http://blog.csdn.net/caisini_vc/article/details/48007297
+
+
+
+ifeve上面试题
+如何实现微信朋友圈功能？朋友圈的分页如何做到的?
+
+
+一个主线程下有多个子线程任务，主线程必须在100秒内将子线程执行的集合结果进行处理返回，
+子线程如果在100秒内没有执行完停止执行
+
+
+ThreadLocal的原理
+
+分库分表如何控制事务，也就是分布式事务有什么解决方案
+
+
+集群环境如何保证某个机器挂掉了ng请求不再有访问打到这个机器
+
+Nginx有个负载均衡的插件叫做 nginx-upstream-fair：按后端服务器的响应时间来分配请求，
+响应时间短的优先分配。
+
+
+除了加锁，还有什么方法解决资源竞争的问题？
+
+
+分布式系统，两个系统之间的数据怎么可以实时同步？
+	消息、缓存、数据库
+
+分布式系统，怎么保持两个系统之间数据的一致性？
+比如两个系统之间传输数据的时候。一个系统坏了怎么破？
+	分布式系统，大部分会实现分区容错性，那如果保证一致性，就需要牺牲可靠性了。
+具体实现也各不同，可以实现强一致性或者最终一致性。每种策略，各有其实现思路。
+比如基于锁，异步响应，基于zookeeper做。
+
+spring的缺点是？
+
+有3个线程ABC。按照ABC来运行（A线程输出A，B线程输出B，C线程输出C，以此类推，循环输出）。
+
+
+阿里面试：如何实现微信“附近的人”功能？
+
+如何减少上下文切换？	
+
+为什么要使用Spring？
+
+事务是如何实现的？
+
+
+经常看到url中很长的一串请求参数，为什么不采用post方式？
+
+答案一：
+简单来说：就是简单和可以缓存
+	2 POST的提交需要表单或js提交，麻烦。
+	3 GET可以使用缓存
+	4 GET有利于SEO
+查看英文资料后：
+	http://www.diffen.com/difference/GET-vs-POST-HTTP-Requests
+	URL长度限制：
+		GET 根据浏览器和WebServer不同长度不同  
+		POST 无限制(指提交的数据无限制)
+	参数数量
+		GET 最好限制在2K， 而POST无限制
+	安全性
+		GET 没有POST安全  URL可以存在浏览器的历史记录里和服务器日志里，都是明文存储，而POST不会
+	缓存 
+		GET 会被缓存 而POST不会
+	
+
+
+
+读写锁
+	用于读多写少的场景，因为这样才能充分发挥其性能.
+	
+京东面试题 – 有一个生成唯一串的需求，并发请求量非常大，该如何实现？
+http://ifeve.com/question/%E4%BA%AC%E4%B8%9C%E9%9D%A2%E8%AF%95%E9%A2%98-%E6%9C%89%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90%E5%94%AF%E4%B8%80%E4%B8%B2%E7%9A%84%E9%9C%80%E6%B1%82%EF%BC%8C%E5%B9%B6%E5%8F%91%E8%AF%B7%E6%B1%82/
+
+
+AIO 和 NIO 有什么区别？
+http://stevex.blog.51cto.com/4300375/1284437
+NIO:同步非阻塞；AIO:异步非阻塞
+如果把内核比作快递，NIO就是你要自己时不时到官网查下快递是否已经到了你所在城市，然后自己去取快递；AIO就是快递员送货上门了。
+	

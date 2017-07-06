@@ -1,0 +1,20 @@
+1. maven 项目设置jdk的编译级别
+<plugin>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <configuration>
+		<source>1.8</source>
+		<target>1.8</target>
+	</configuration>
+    <executions>
+      <execution>
+        <id>default-compile</id>
+        <phase>none</phase>
+      </execution>
+      <execution>
+        <id>default-testCompile</id>
+        <phase>none</phase>
+      </execution>
+    </executions>
+</plugin>
+
+2. 

@@ -1,0 +1,26 @@
+防表单提交方式
+http://www.vaikan.com/prevent-duplicate-form-submission/
+	禁掉提交按钮
+	Post/Redirect/Get (PRG)模式
+	在session中存放一个特殊标志
+	在数据库里添加约束
+http://www.bkjia.com/jingyan/471187.html
+
+session劫持
+https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/06.4.md
+
+redis：
+国内外巨头分享Redis实战经验及使用场景
+http://www.chinacloud.cn/show.aspx?id=13650&cid=11
+Redis作者谈Redis应用场景
+http://blog.nosqlfan.com/html/2235.html
+Redis应用场景
+http://www.scienjus.com/redis-use-case/
+Redis 的 5 个常见使用场景
+http://blog.jobbole.com/88383/
+排行榜实现
+http://yijiebuyi.com/blog/9c465aa25ef6d45c162ce1e555fc0e6c.html
+
+
+HTTPS协议
+https://www.oschina.net/translate/understanding-https-protocol

@@ -1,0 +1,15 @@
+How to Write Go Code
+	https://golang.org/doc/code.html
+
+三大目录：
+src 源码 支持多个版本库
+pkg 依赖包/库
+bin 命令存放位置
+
+GOPATH 环境变量 (windows 上我写死是 C:\Users\Administrator\go\)
+	
+go test 命令和testing包
+	//未看
+
+远程包 // 直接下载远程包，并且完成打包等操作
+	

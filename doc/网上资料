@@ -1,35 +1,38 @@
-Nettyç³»åˆ—ä¹‹Nettyå®‰å…¨æ€§
+ÉÏgoogleÓÃµÄ
+http://www.ttlsa.com/news/google-search-engine-2016-06-04/
+
+NettyÏµÁĞÖ®Netty°²È«ĞÔ
   http://www.infoq.com/cn/articles/netty-security
 
-Nginxé…ç½®upstreamå®ç°è´Ÿè½½å‡è¡¡
+NginxÅäÖÃupstreamÊµÏÖ¸ºÔØ¾ùºâ
   http://favccxx.blog.51cto.com/2890523/1622091
   
-å…³äºTCP_NODELAY å’Œ TCP_CORKé€‰é¡¹
+¹ØÓÚTCP_NODELAY ºÍ TCP_CORKÑ¡Ïî
   http://www.cnblogs.com/maowang1991/archive/2013/04/16/3024518.html
   
-ä½¿ç”¨nginx stickyå®ç°åŸºäºcookieçš„è´Ÿè½½å‡è¡¡
+Ê¹ÓÃnginx stickyÊµÏÖ»ùÓÚcookieµÄ¸ºÔØ¾ùºâ
   http://www.ttlsa.com/nginx/nginx-modules-nginx-sticky-module/
   
-å…³äºnetty-tcnativeé¡¹ç›®ï¼š
+¹ØÓÚnetty-tcnativeÏîÄ¿£º
   https://github.com/trustin/os-maven-plugin
 
-tomcaté›†ç¾¤åŒ–
+tomcat¼¯Èº»¯
   http://wiki.jikexueyuan.com/project/tomcat/clustering.html
 
-Git-ä¸­æ–‡ä¹±ç é—®é¢˜  
+Git-ÖĞÎÄÂÒÂëÎÊÌâ  
 https://segmentfault.com/a/1190000000578037
 
 https://www.ibm.com/developerworks/cn/java/j-lo-jse61/
 
-Instrumentationç”¨æ³• // å®ç°å­—èŠ‚ç çš„åŠ¨æ€ä¿®æ­£
+InstrumentationÓÃ·¨ // ÊµÏÖ×Ö½ÚÂëµÄ¶¯Ì¬ĞŞÕı
 https://www.ibm.com/developerworks/cn/java/j-lo-jse61/
 
-tomcat context åŸºæœ¬ç†è§£
+tomcat context »ù±¾Àí½â
 http://elf8848.iteye.com/blog/1931777
 
-é˜¿é‡Œäº‘è§„åˆ™å¼•æ“
+°¢ÀïÔÆ¹æÔòÒıÇæ
 https://help.aliyun.com/document_detail/30354.html
-é˜¿é‡Œäº‘äº§å“
+°¢ÀïÔÆ²úÆ·
 https://help.aliyun.com/knowledge_detail/36116.html
-æ”¯ä»˜å®ç³»ç»Ÿæ¶æ„å†…éƒ¨å‰–æ- é¸Ÿçª
+Ö§¸¶±¦ÏµÍ³¼Ü¹¹ÄÚ²¿ÆÊÎö- ÄñÎÑ
 http://colobu.com/2015/04/20/inside-alipay-architecture/
