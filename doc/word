@@ -1,0 +1,19 @@
+
+dominator 统治者 支配者  // dominator classes 
+
+mat用法
+http://help.eclipse.org/kepler/index.jsp?topic=%2Forg.eclipse.mat.ui.help%2Fconcepts%2Fshallowretainedheap.html
+Shallow vs. Retained Heap
+  http://blog.csdn.net/hhww0101/article/details/8133219
+  一个是对象引用占用的堆大小，一个是对象占用的实际堆大小
+  
+  linux 命令集
+  http://caar369.blog.51cto.com/6449006/1123414
+  
+  网络基本功系列
+  https://wizardforcel.gitbooks.io/network-basic/content/index.html
+  
+  java 引用类型
+  ThreadLocal实现机制
+  ForkJoin框架
+    work-stealing工作窃取算法
