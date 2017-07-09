@@ -35,6 +35,14 @@ http://blog.csdn.net/fengjia10/article/details/6927984
 10.谈谈对类加载器原理的理解，child first/parent first模型优缺点如何？
 11.谈谈对ASM的理解
 12.谈谈JVM调优经验
+	1 -Xmx 堆空间大小调优
+	2 分代垃圾回收器调优
+		-XX: NewSize //一般为堆空间的三分之一或二分之一
+		-XX:SurvivorRatio // Eden和Survivor区的大小
+	3 垃圾回收调优
+		老年代采用并发垃圾回收，比如CMS
+		虽然并行的办法能够带来非常好的吞吐量基准测试分数，但是并行GC不利于缩短响应时间。
+		并发 GC 是目前唯一有效的实现一致性和最少“stop the world”中断的方法
 13. Maven的phase,goal有什么区别?lifecycle呢?Git是如何pull request的
 
 全局统筹篇（技术深度，广度，前沿技术敏感度，工作习惯，架构观）

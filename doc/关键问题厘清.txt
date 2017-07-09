@@ -65,8 +65,54 @@ ibatis±¾ÊÇapacheµÄÒ»¸ö¿ªÔ´ÏîÄ¿£¬2010ÄêÕâ¸öÏîÄ¿ÓÉapache software foundation Ç¨ÒÆµ
 Class.forNameºÍclassloader.loadClass()µÄÇø±ğ
 Ç°ÕßloadÀàÖ®ºóÀà±ØĞë½øĞĞinitialing
 ºóÕßloadÀàÖ®ºóÎ´½øĞĞlinking
-¶ÔÓÚJDBCÇı¶¯ÀàµÄ¼ÓÔØ±ØĞëÊ¹ÓÃÇ°Õß£¬ÒòÎªÇı¶¯µÄ×¢²áÊÇÔÚstaticÓï¾äÖĞ£¬¶østaticÓï¾äÊÇÀàinitialing²Å»áÖ´ĞĞ
+¶ÔÓÚJDBCÇı¶¯ÀàµÄ¼ÓÔØ±ØĞëÊ¹ÓÃÇ°Õß£¬ÒòÎªÇı¶¯µÄ×¢²áÊÇÔÚstaticÓï¾äÖĞ£¬
+¶østaticÓï¾äÊÇÀàinitialing²Å»áÖ´ĞĞ
+ÒÔmysqlµÄDriverÎªÀı£¬µ±class.forName()Ê±»áµ÷ÓÃÈçÏÂ£º
+static {
+		try {
+			java.sql.DriverManager.registerDriver(new Driver());
+		} catch (SQLException E) {
+			throw new RuntimeException("Can't register driver!");
+		}
+	}
 
+×Ö·û´®³£Á¿³ØÎÊÌâ
+1 ×Ö·û´®³£Á¿³ØÊÇ¶ÑÖĞµÄÒ»¸ö²¿·Ö£¬ÎªJVM½ÚÊ¡ÁË¿Õ¼ä
+2 ËùÓĞµÄ×Ö·û´®×ÖÃæÁ¿ºÍ»ùÓÚ×Ö·û´®µÄ±í´ïÊ½¶¼»á±»interned£¬¼´½øÈëµ½×Ö·û´®³£Á¿³ØÖĞ
+3 String s = new String("abc");  ÆäÖĞnew³öÀ´µÄ¶ÔÏóÎ»ÓÚ¶ÑÖĞ£¬µ«ÊÇ"abc"»¹ÊÇÔÚ³£Á¿³ØÖĞ
+http://www.journaldev.com/797/what-is-java-string-pool
+
+¾­³£¿´µ½urlÖĞºÜ³¤µÄÒ»´®ÇëÇó²ÎÊı£¬ÎªÊ²Ã´²»²ÉÓÃpost·½Ê½£¿
+
+´ğ°¸Ò»£º
+¼òµ¥À´Ëµ£º¾ÍÊÇ¼òµ¥ºÍ¿ÉÒÔ»º´æ
+	2 POSTµÄÌá½»ĞèÒª±íµ¥»òjsÌá½»£¬Âé·³¡£
+	3 GET¿ÉÒÔÊ¹ÓÃ»º´æ
+	4 GETÓĞÀûÓÚSEO
+²é¿´Ó¢ÎÄ×ÊÁÏºó£º
+	http://www.diffen.com/difference/GET-vs-POST-HTTP-Requests
+	URL³¤¶ÈÏŞÖÆ£º
+		GET ¸ù¾İä¯ÀÀÆ÷ºÍWebServer²»Í¬³¤¶È²»Í¬  
+		POST ÎŞÏŞÖÆ(Ö¸Ìá½»µÄÊı¾İÎŞÏŞÖÆ)
+	²ÎÊıÊıÁ¿
+		GET ×îºÃÏŞÖÆÔÚ2K£¬ ¶øPOSTÎŞÏŞÖÆ
+	°²È«ĞÔ
+		GET Ã»ÓĞPOST°²È«  URL¿ÉÒÔ´æÔÚä¯ÀÀÆ÷µÄÀúÊ·¼ÇÂ¼ÀïºÍ·şÎñÆ÷ÈÕÖ¾Àï£¬¶¼ÊÇÃ÷ÎÄ´æ´¢£¬¶øPOST²»»á
+	»º´æ 
+		GET »á±»»º´æ ¶øPOST²»»á
+
+¶ÁĞ´Ëø
+	ÓÃÓÚ¶Á¶àĞ´ÉÙµÄ³¡¾°£¬ÒòÎªÕâÑù²ÅÄÜ³ä·Ö·¢»ÓÆäĞÔÄÜ.
+	
+¾©¶«ÃæÊÔÌâ ¨C ÓĞÒ»¸öÉú³ÉÎ¨Ò»´®µÄĞèÇó£¬²¢·¢ÇëÇóÁ¿·Ç³£´ó£¬¸ÃÈçºÎÊµÏÖ£¿
+http://ifeve.com/question/%E4%BA%AC%E4%B8%9C%E9%9D%A2%E8%AF%95%E9%A2%98-%E6%9C%89%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90%E5%94%AF%E4%B8%80%E4%B8%B2%E7%9A%84%E9%9C%80%E6%B1%82%EF%BC%8C%E5%B9%B6%E5%8F%91%E8%AF%B7%E6%B1%82/
+
+
+AIO ºÍ NIO ÓĞÊ²Ã´Çø±ğ£¿
+http://stevex.blog.51cto.com/4300375/1284437
+NIO:Í¬²½·Ç×èÈû£»AIO:Òì²½·Ç×èÈû
+Èç¹û°ÑÄÚºË±È×÷¿ìµİ£¬NIO¾ÍÊÇÄãÒª×Ô¼ºÊ±²»Ê±µ½¹ÙÍø²éÏÂ¿ìµİÊÇ·ñÒÑ¾­µ½ÁËÄãËùÔÚ³ÇÊĞ£¬È»ºó×Ô¼ºÈ¥È¡¿ìµİ£»
+AIO¾ÍÊÇ¿ìµİÔ±ËÍ»õÉÏÃÅÁË¡£
 -------------------------------------------------------------------------------------
 
 Hashtable,HashMap,ConcurrentHashMapµ×²ãÊµÏÖÔ­ÀíÓëÏß³Ì°²È«ÎÊÌâ

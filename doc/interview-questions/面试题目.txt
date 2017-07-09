@@ -30,13 +30,6 @@ http://www.cnblogs.com/moonandstar08/p/5582281.html
 ¶þÎ¬ÂëÉú³ÉÏ¸½ÚÓëÔ­Àí
 http://coolshell.cn/articles/10590.html
 
-×Ö·û´®³£Á¿³ØÎÊÌâ
-1 ×Ö·û´®³£Á¿³ØÊÇ¶ÑÖÐµÄÒ»¸ö²¿·Ö£¬ÎªJVM½ÚÊ¡ÁË¿Õ¼ä
-2 ËùÓÐµÄ×Ö·û´®×ÖÃæÁ¿ºÍ»ùÓÚ×Ö·û´®µÄ±í´ïÊ½¶¼»á±»interned£¬¼´½øÈëµ½×Ö·û´®³£Á¿³ØÖÐ
-3 String s = new String("abc");  ÆäÖÐnew³öÀ´µÄ¶ÔÏóÎ»ÓÚ¶ÑÖÐ£¬µ«ÊÇ"abc"»¹ÊÇÔÚ³£Á¿³ØÖÐ
-http://www.journaldev.com/797/what-is-java-string-pool
-
-
 HTTPS:
 http://www.techug.com/post/https-ssl-tls.html
 http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html
@@ -77,9 +70,6 @@ NginxÓÐ¸ö¸ºÔØ¾ùºâµÄ²å¼þ½Ð×ö nginx-upstream-fair£º°´ºó¶Ë·þÎñÆ÷µÄÏìÓ¦Ê±¼äÀ´·ÖÅäÇëÇ
 ÏìÓ¦Ê±¼ä¶ÌµÄÓÅÏÈ·ÖÅä¡£
 
 
-³ýÁË¼ÓËø£¬»¹ÓÐÊ²Ã´·½·¨½â¾ö×ÊÔ´¾ºÕùµÄÎÊÌâ£¿
-
-
 ·Ö²¼Ê½ÏµÍ³£¬Á½¸öÏµÍ³Ö®¼äµÄÊý¾ÝÔõÃ´¿ÉÒÔÊµÊ±Í¬²½£¿
 	ÏûÏ¢¡¢»º´æ¡¢Êý¾Ý¿â
 
@@ -89,51 +79,9 @@ NginxÓÐ¸ö¸ºÔØ¾ùºâµÄ²å¼þ½Ð×ö nginx-upstream-fair£º°´ºó¶Ë·þÎñÆ÷µÄÏìÓ¦Ê±¼äÀ´·ÖÅäÇëÇ
 ¾ßÌåÊµÏÖÒ²¸÷²»Í¬£¬¿ÉÒÔÊµÏÖÇ¿Ò»ÖÂÐÔ»òÕß×îÖÕÒ»ÖÂÐÔ¡£Ã¿ÖÖ²ßÂÔ£¬¸÷ÓÐÆäÊµÏÖË¼Â·¡£
 ±ÈÈç»ùÓÚËø£¬Òì²½ÏìÓ¦£¬»ùÓÚzookeeper×ö¡£
 
-springµÄÈ±µãÊÇ£¿
-
 ÓÐ3¸öÏß³ÌABC¡£°´ÕÕABCÀ´ÔËÐÐ£¨AÏß³ÌÊä³öA£¬BÏß³ÌÊä³öB£¬CÏß³ÌÊä³öC£¬ÒÔ´ËÀàÍÆ£¬Ñ­»·Êä³ö£©¡£
 
 
 °¢ÀïÃæÊÔ£ºÈçºÎÊµÏÖÎ¢ÐÅ¡°¸½½üµÄÈË¡±¹¦ÄÜ£¿
 
-ÈçºÎ¼õÉÙÉÏÏÂÎÄÇÐ»»£¿	
-
-ÎªÊ²Ã´ÒªÊ¹ÓÃSpring£¿
-
-ÊÂÎñÊÇÈçºÎÊµÏÖµÄ£¿
-
-
-¾­³£¿´µ½urlÖÐºÜ³¤µÄÒ»´®ÇëÇó²ÎÊý£¬ÎªÊ²Ã´²»²ÉÓÃpost·½Ê½£¿
-
-´ð°¸Ò»£º
-¼òµ¥À´Ëµ£º¾ÍÊÇ¼òµ¥ºÍ¿ÉÒÔ»º´æ
-	2 POSTµÄÌá½»ÐèÒª±íµ¥»òjsÌá½»£¬Âé·³¡£
-	3 GET¿ÉÒÔÊ¹ÓÃ»º´æ
-	4 GETÓÐÀûÓÚSEO
-²é¿´Ó¢ÎÄ×ÊÁÏºó£º
-	http://www.diffen.com/difference/GET-vs-POST-HTTP-Requests
-	URL³¤¶ÈÏÞÖÆ£º
-		GET ¸ù¾Ýä¯ÀÀÆ÷ºÍWebServer²»Í¬³¤¶È²»Í¬  
-		POST ÎÞÏÞÖÆ(Ö¸Ìá½»µÄÊý¾ÝÎÞÏÞÖÆ)
-	²ÎÊýÊýÁ¿
-		GET ×îºÃÏÞÖÆÔÚ2K£¬ ¶øPOSTÎÞÏÞÖÆ
-	°²È«ÐÔ
-		GET Ã»ÓÐPOST°²È«  URL¿ÉÒÔ´æÔÚä¯ÀÀÆ÷µÄÀúÊ·¼ÇÂ¼ÀïºÍ·þÎñÆ÷ÈÕÖ¾Àï£¬¶¼ÊÇÃ÷ÎÄ´æ´¢£¬¶øPOST²»»á
-	»º´æ 
-		GET »á±»»º´æ ¶øPOST²»»á
-	
-
-
-
-¶ÁÐ´Ëø
-	ÓÃÓÚ¶Á¶àÐ´ÉÙµÄ³¡¾°£¬ÒòÎªÕâÑù²ÅÄÜ³ä·Ö·¢»ÓÆäÐÔÄÜ.
-	
-¾©¶«ÃæÊÔÌâ ¨C ÓÐÒ»¸öÉú³ÉÎ¨Ò»´®µÄÐèÇó£¬²¢·¢ÇëÇóÁ¿·Ç³£´ó£¬¸ÃÈçºÎÊµÏÖ£¿
-http://ifeve.com/question/%E4%BA%AC%E4%B8%9C%E9%9D%A2%E8%AF%95%E9%A2%98-%E6%9C%89%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90%E5%94%AF%E4%B8%80%E4%B8%B2%E7%9A%84%E9%9C%80%E6%B1%82%EF%BC%8C%E5%B9%B6%E5%8F%91%E8%AF%B7%E6%B1%82/
-
-
-AIO ºÍ NIO ÓÐÊ²Ã´Çø±ð£¿
-http://stevex.blog.51cto.com/4300375/1284437
-NIO:Í¬²½·Ç×èÈû£»AIO:Òì²½·Ç×èÈû
-Èç¹û°ÑÄÚºË±È×÷¿ìµÝ£¬NIO¾ÍÊÇÄãÒª×Ô¼ºÊ±²»Ê±µ½¹ÙÍø²éÏÂ¿ìµÝÊÇ·ñÒÑ¾­µ½ÁËÄãËùÔÚ³ÇÊÐ£¬È»ºó×Ô¼ºÈ¥È¡¿ìµÝ£»AIO¾ÍÊÇ¿ìµÝÔ±ËÍ»õÉÏÃÅÁË¡£
 	

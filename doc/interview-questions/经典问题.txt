@@ -107,6 +107,7 @@ http://javaconceptoftheday.com/types-of-references-in-java-strong-soft-weak-and-
 11. 如果想不被 GC 怎么办
 
 12. 如果想在 GC 中生存 1 次怎么办
+		
 
 五、开源框架
 1. hibernate和ibatis的区别
