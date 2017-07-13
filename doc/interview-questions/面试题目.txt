@@ -1,33 +1,33 @@
-��Ŀ��
+题目：
 http://www.banzg.com/archives/639.html
 http://mm.fancymore.com/reading/Java-interview-jvm-mode1.html
 https://www.oschina.NET/translate/java-interview-questions-and-answers
 
 
-https://www.bbsmax.com/A/Ae5RMA8JQ9/ �д𰸣����Ը��õزο�
+https://www.bbsmax.com/A/Ae5RMA8JQ9/ 有答案，可以更好地参考
 
-���ţ�
+调优：
 http://ifeve.com/java-performance-tuning-survey-results-part-ii/
 http://www.importnew.com/22653.html
 http://www.importnew.com/22401.html
 
-������
+并发：
 http://www.cnblogs.com/icejoywoo/archive/2012/10/15/2724674.html
 http://www.programcreek.com/2009/02/notify-and-wait-example/
 http://stackoverflow.com/questions/2779484/why-must-wait-always-be-in-synchronized-block
 
-�����������������
-���ò������򣬲����������������Ч�ʼ���
-http://bubkoo.com/2014/01/15/sort-algorithm/merge-sort/  �鲢����
+两个有序数组的排序
+采用插入排序，插入排序对有序数组效率极高
+http://bubkoo.com/2014/01/15/sort-algorithm/merge-sort/  归并排序
 
-����������(HUFFMAN����) //���ڱ����ѹ��
+霍夫曼编码(HUFFMAN编码) //用于编码和压缩
 http://coolshell.cn/articles/7459.html
 
-sessionͬ������
+session同步问题
 http://blog.51yip.com/server/922.html
 http://www.cnblogs.com/moonandstar08/p/5582281.html
 
-��ά������ϸ����ԭ��
+二维码生成细节与原理
 http://coolshell.cn/articles/10590.html
 
 HTTPS:
@@ -36,52 +36,52 @@ http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html
 http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html
 
 
-spring AOP��
+spring AOP：
 https://www.ibm.com/developerworks/cn/java/j-lo-springaopcglib/
 https://wangchangchung.github.io/2016/11/11/Spring%E7%9A%84%E4%BA%8B%E5%8A%A1%E6%9E%B6%E6%9E%84/
 http://blog.csdn.net/hjm4702192/article/details/17277669
 
 
 
-�ѹ�������1����
+搜狗面试题1道：
 http://www.oschina.net/question/554705_55753?sort=time&p=1
 
-kafka����֪ʶ
+kafka基本知识
 http://blog.csdn.net/caisini_vc/article/details/48007297
 
 
 
-ifeve��������
-���ʵ��΢������Ȧ���ܣ�����Ȧ�ķ�ҳ���������?
+ifeve上面试题
+如何实现微信朋友圈功能？朋友圈的分页如何做到的?
 
 
-һ�����߳����ж�����߳��������̱߳�����100���ڽ����߳�ִ�еļ��Ͻ�����д������أ�
-���߳������100����û��ִ����ִֹͣ��
+一个主线程下有多个子线程任务，主线程必须在100秒内将子线程执行的集合结果进行处理返回，
+子线程如果在100秒内没有执行完停止执行
 
 
-ThreadLocal��ԭ��
+ThreadLocal的原理
 
-�ֿ�ֱ���ο�������Ҳ���Ƿֲ�ʽ������ʲô�������
-
-
-��Ⱥ������α�֤ĳ�������ҵ���ng�������з��ʴ��������
-
-Nginx�и����ؾ���Ĳ������ nginx-upstream-fair������˷���������Ӧʱ������������
-��Ӧʱ��̵����ȷ��䡣
+分库分表如何控制事务，也就是分布式事务有什么解决方案
 
 
-�ֲ�ʽϵͳ������ϵͳ֮���������ô����ʵʱͬ����
-	��Ϣ�����桢���ݿ�
+集群环境如何保证某个机器挂掉了ng请求不再有访问打到这个机器
 
-�ֲ�ʽϵͳ����ô��������ϵͳ֮�����ݵ�һ���ԣ�
-��������ϵͳ֮�䴫�����ݵ�ʱ��һ��ϵͳ������ô�ƣ�
-	�ֲ�ʽϵͳ���󲿷ֻ�ʵ�ַ����ݴ��ԣ��������֤һ���ԣ�����Ҫ�����ɿ����ˡ�
-����ʵ��Ҳ����ͬ������ʵ��ǿһ���Ի�������һ���ԡ�ÿ�ֲ��ԣ�������ʵ��˼·��
-������������첽��Ӧ������zookeeper����
-
-��3���߳�ABC������ABC�����У�A�߳����A��B�߳����B��C�߳����C���Դ����ƣ�ѭ���������
+Nginx有个负载均衡的插件叫做 nginx-upstream-fair：按后端服务器的响应时间来分配请求，
+响应时间短的优先分配。
 
 
-�������ԣ����ʵ��΢�š��������ˡ����ܣ�
+分布式系统，两个系统之间的数据怎么可以实时同步？
+	消息、缓存、数据库
+
+分布式系统，怎么保持两个系统之间数据的一致性？
+比如两个系统之间传输数据的时候。一个系统坏了怎么破？
+	分布式系统，大部分会实现分区容错性，那如果保证一致性，就需要牺牲可靠性了。
+具体实现也各不同，可以实现强一致性或者最终一致性。每种策略，各有其实现思路。
+比如基于锁，异步响应，基于zookeeper做。
+
+有3个线程ABC。按照ABC来运行（A线程输出A，B线程输出B，C线程输出C，以此类推，循环输出）。
+
+
+阿里面试：如何实现微信“附近的人”功能？
 
 	

@@ -1,0 +1,124 @@
+常见服务器架构分析
+tomcat
+	Server
+		Service
+			Connectors
+			Engine
+				Hosts
+				
+jetty
+	
+	
+apache
+	模块化
+nginx	
+	http://tengine.taobao.org/book/chapter_02.html
+	启动后一个master进程，多个worker进程
+	master进程主要用来管理worker进程，包含：
+		接收来自外界的信号，
+		向各worker进程发送信号，
+		监控worker进程的运行状态，
+		当worker进程退出后(异常情况下)，会自动重新启动新的worker进程。
+	worker进程
+		而基本的网络事件，则是放在worker进程中来处理了。
+		多个worker进程之间是对等的，他们同等竞争来自客户端的请求，
+		各进程互相之间是独立的。一个请求，只可能在一个worker进程中处理，一个worker进程，不可能处理其它进程的请求。
+		worker进程的个数是可以设置的，一般我们会设置与机器cpu核数一致，这里面的原因与nginx的进程模型以及事件处理模型是分不开的。
+	
+weldfly
+	
+	
+websphere
+
+
+
+
+AccessLogValve
+ErrorReportValve
+StandardHostValve  // 选择Context对象
+	StandardContext#pipeline 
+		 // context.getPipeline().getFirst().invoke(request, response);
+ 		//context.getPipeline().getFirst() 即 StandardContextValve
+		进入 StandardWrapper的pipeline
+			StandardWrapperValve
+
+
+StandardEngine
+--StandardHost
+  --StandardContext
+    --StandardWrapper		
+
+AbstractConnectionHandler#process方法
+
+
+AbstractHttp11Processor#process
+	org.apache.tomcat.util.threads.TaskThreadFactory
+	
+	
+	
+	org.apache.tomcat.util.net.NioBlockingSelector.BlockPoller 2个线程
+		?
+			
+	
+	org.apache.tomcat.util.net.NioEndpoint.startInternal
+主要的IO线程都在这里启动
+
+org.apache.tomcat.util.net.NioEndpoint.Acceptor
+	默认使用的Acceptor，默认创建1个
+	其他还有四种Acceptor
+	接收socket连接，将连接注册到Poller上
+org.apache.tomcat.util.net.NioEndpoint.Poller //对应的线程名 -ClientPoller-i
+	Poller接收具体的读写事件
+org.apache.tomcat.util.net.NioEndpoint.SocketProcessor 
+	对应一个socket任务，读/写
+	//AbstractProtocol.AbstractConnectionHandler.process真正的处理 Handler怎么注进来的？
+org.apache.tomcat.util.net.NioEndpoint#createExecutor	
+	创建工作者线程池  
+
+org.apache.tomcat.util.net.NioBlockingSelector.BlockPoller // 初步判定该类是在内部处理读写的时候起作用 
+org.apache.tomcat.util.net.NioEndpoint#bind
+
+ContainerBackgroundProcessor 
+	每隔10s检测是否有文件的更新
+	
+	
+常见问题：		
+tomcat的context的reloadable实现			
+JSP的reload
+
+
+maxConnections acceptCount  maxThreads 区别
+BIO和NIO的本质区别
+https://stackoverflow.com/questions/39644830/what-are-acceptcount-maxconnections-and-maxthreads-in-tomcat-http-connector-con
+https://stackoverflow.com/questions/24678661/tomcat-maxthreads-vs-maxconnections
+https://www.oschina.net/translate/tomcat-performance-tuning
+http://www.iteye.com/topic/190329
+http://tomcat.apache.org/tomcat-8.0-doc/config/http.html
+
+https://www.ibm.com/developerworks/cn/web/wa-lo-comet/
+ 
+
+
+	
+JSP的reload
+// JSP的类加载器：JasperLoader
+JspServletWrapper#getServlet
+用新的JasperLoader进行加载编译的servlet类
+	
+----------------------------------------------------------------------
+
+tomcat优化 连接方面的最重要参数：
+maxThreads
+acceptCount // 即backlog，见代码org.apache.catalina.connector.Connector 244行
+maxConnections  
+	// 对于BIO 和maxThreads相等(若使用了线程池，则只使用线程池里的maxThreads) 
+	// 对于NIO和NIO2 默认10000
+	// 对于APR/native，默认8192
+
+
+运行 ant ide-eclipse 搭建tomcat8开发环境
+可能的eclipse参数配置
+ANT_HOME
+F:/code-life/Java/framework/ant/implements/apache-ant-1.9.7
+TOMCAT_LIBS_BASE
+D:/usr/share/java

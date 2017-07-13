@@ -8,13 +8,13 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Ò»¸öÖ÷Ïß³ÌÏÂÓĞ¶à¸ö×ÓÏß³ÌÈÎÎñ£¬Ö÷Ïß³Ì±ØĞëÔÚ100ÃëÄÚ½«×ÓÏß³ÌÖ´ĞĞµÄ¼¯ºÏ½á¹û½øĞĞ´¦Àí·µ»Ø ×ÓÏß³ÌÈç¹ûÔÚ100ÃëÄÚÃ»ÓĞÖ´ĞĞÍêÍ£Ö¹Ö´ĞĞ
+ * ä¸€ä¸ªä¸»çº¿ç¨‹ä¸‹æœ‰å¤šä¸ªå­çº¿ç¨‹ä»»åŠ¡ï¼Œä¸»çº¿ç¨‹å¿…é¡»åœ¨100ç§’å†…å°†å­çº¿ç¨‹æ‰§è¡Œçš„é›†åˆç»“æœè¿›è¡Œå¤„ç†è¿”å› å­çº¿ç¨‹å¦‚æœåœ¨100ç§’å†…æ²¡æœ‰æ‰§è¡Œå®Œåœæ­¢æ‰§è¡Œ
  * 
  * @author Administrator
  *
  */
 public class ExecuteInSpecifiedTime {
-	// ¿ªÆô¶àÉÙ¸ö×ÓÏß³Ì
+	// å¼€å¯å¤šå°‘ä¸ªå­çº¿ç¨‹
 	private static final int THREAD_COUNT = 2;
 	private static final int THREAD_TIMEOUT = 5;
 
@@ -23,7 +23,7 @@ public class ExecuteInSpecifiedTime {
 	}
 
 	/**
-	 * ²ÉÓÃÏß³Ì³ØµÄawaitTermination·½·¨.
+	 * é‡‡ç”¨çº¿ç¨‹æ± çš„awaitTerminationæ–¹æ³•.
 	 * 
 	 */
 	public static void way1() {
@@ -43,17 +43,17 @@ public class ExecuteInSpecifiedTime {
 		try {
 			boolean result = pool.awaitTermination(THREAD_TIMEOUT, TimeUnit.SECONDS);
 			if(result) {
-				// Ö´ĞĞÍê±Ï ½»ÓÉÖ÷Ïß³ÌÖ´ĞĞ
+				// æ‰§è¡Œå®Œæ¯• äº¤ç”±ä¸»çº¿ç¨‹æ‰§è¡Œ
 				System.out.println("Main Thread executing success ...");
 				c1.call();
 			}
 			else {
 				System.out.println("Sub Thread can not execute in "+ THREAD_TIMEOUT + " s ...");
 			}
-			// TODO ÎŞ·¨¹Ø±ÕËÀÑ­»·µÄÏß³Ì
+			// TODO æ— æ³•å…³é—­æ­»å¾ªç¯çš„çº¿ç¨‹
 			pool.shutdownNow();
 		} catch (Exception e) {
-			// 100s»¹Ã»Ö´ĞĞÍê
+			// 100sè¿˜æ²¡æ‰§è¡Œå®Œ
 			e.printStackTrace();
 		}
 	}
@@ -61,7 +61,7 @@ public class ExecuteInSpecifiedTime {
 	private static CountDownLatch cdl = new CountDownLatch(THREAD_COUNT);
 
 	/**
-	 * ²ÉÓÃ CountDownLatchµÄawait³¬Ê±·½·¨.
+	 * é‡‡ç”¨ CountDownLatchçš„awaitè¶…æ—¶æ–¹æ³•.
 	 * 
 	 */
 	public static void way2() {
@@ -80,10 +80,10 @@ public class ExecuteInSpecifiedTime {
 			boolean result = cdl.await(THREAD_TIMEOUT, TimeUnit.SECONDS);
 			if(result) {
 				System.out.println("Main Thread executing success ...");
-				// ºÏ²¢sub thread ½á¹û
+				// åˆå¹¶sub thread ç»“æœ
 			}
 			else {
-				// ³¬Ê± ×ÓÏß³ÌÔÚÖ¸¶¨Ê±¼äÄÚÎ´Íê³É
+				// è¶…æ—¶ å­çº¿ç¨‹åœ¨æŒ‡å®šæ—¶é—´å†…æœªå®Œæˆ
 				System.out.println("Sub Thread can not execute in "+ THREAD_TIMEOUT + " s ...");
 			}
 			pool.shutdown();

@@ -1,0 +1,32 @@
+http://blog.csdn.net/qianshangding0708/article/details/48024239
+缓存雪崩
+	缓存在某一个时间点大量失效//分析用户行为，分散缓存失效的时间点
+	缓存服务器宕机// 考虑主备双缓存
+	
+缓存穿透
+	产生原因，数据库中没有数据，自然缓存中也没有，这些请求就会直接落到数据库上
+缓存预热
+	数据量小可以在程序启动时加载进来
+	数据量大或者分布式环境 ？
+缓存算法
+	LRU
+	LFU 最不经常使用
+	FIFO 
+一致性算法
+缓存性能
+
+缓存穿透
+	http://carlosfu.iteye.com/blog/2248185
+	http://blog.csdn.net/zeb_perfect/article/details/54135506
+	http://ifeve.com/concurrency-cache-cross/
+	
+一致性hash
+	基础：待存储对象，缓存节点，虚拟节点 ，三者共享一个所谓的hash空间(大小可以是2的32次方)
+	设计要点：如何设置虚拟节点,
+				// 一种设置方式： 机器IP+序号，每个缓存节点对应多个虚拟节点
+			    如何选择hash算法(更高的命中率,有效的故障转移)?
+	请求到达虚拟节点 -> 到达缓存节点 
+	
+
+memcached和redis的客户端代码是如何实现一致性hash的
+

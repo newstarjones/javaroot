@@ -1,24 +1,24 @@
-Êý¾Ý¿âÁ¬½Ó³ØDBCP£º
+æ•°æ®åº“è¿žæŽ¥æ± DBCPï¼š
 http://www.cnblogs.com/biakia/p/4352197.html  
 
 http://www.voidcn.com/blog/m47838704/article/p-5962185.html 
 
-C3P0£¬DBCP£¬»á³öÏÖÊý¾Ý¿âÎÞ·¨ÖØÁ¬µÄÎÊÌâ£¬»»³Édruid¾ÍºÃÁË£¿
-Êý¾Ý¿âÖØÆôºó£¬ÊÇ·ñÒªÖØÆôÓ¦ÓÃÒÔ»ñµÃÁ¬½Ó?
+C3P0ï¼ŒDBCPï¼Œä¼šå‡ºçŽ°æ•°æ®åº“æ— æ³•é‡è¿žçš„é—®é¢˜ï¼Œæ¢æˆdruidå°±å¥½äº†ï¼Ÿ
+æ•°æ®åº“é‡å¯åŽï¼Œæ˜¯å¦è¦é‡å¯åº”ç”¨ä»¥èŽ·å¾—è¿žæŽ¥?
 
-druidÎÂÉÙ·ÃÌ¸
+druidæ¸©å°‘è®¿è°ˆ
 http://www.iteye.com/magazines/90
 
 
 
-activiemq ´óÏûÏ¢¶ªÊ§£¿
+activiemq å¤§æ¶ˆæ¯ä¸¢å¤±ï¼Ÿ
 
-³¡¾°£ºÍøÂçÂý£¬ÓÈÆäÊÇ¿çÍøÂçµÄÇé¿öÏÂ
+åœºæ™¯ï¼šç½‘ç»œæ…¢ï¼Œå°¤å…¶æ˜¯è·¨ç½‘ç»œçš„æƒ…å†µä¸‹
 
-½â¾ö·½Ê½£ºÉèÖÃwireFormat.maxInactivityDuration=0»òÕß¸ü´óµÄÖµ¡£
+è§£å†³æ–¹å¼ï¼šè®¾ç½®wireFormat.maxInactivityDuration=0æˆ–è€…æ›´å¤§çš„å€¼ã€‚
 
-Ô­Òò£ºÔÚconnection¿ÉÓÃÊ±£¨Èç¿Í»§¶ËÔÚ·¢Ò»¸ö´óÏûÏ¢£¬ÕâÀïµÄ¿ÉÓÃÒªÔÙË¼¿¼ÏÂº¬Òå£©£¬brokerµÈ´ýmaxInactivityDurationÊ±¼ä
-    ºó»¹Î´ÊÕµ½ÏûÏ¢£¬½«Ö÷¶¯¹Ø±Õ¸ÃÁ¬½Ó,ÕâÊ±µ¼ÖÂÏûÏ¢¶ªÊ§¡£
+åŽŸå› ï¼šåœ¨connectionå¯ç”¨æ—¶ï¼ˆå¦‚å®¢æˆ·ç«¯åœ¨å‘ä¸€ä¸ªå¤§æ¶ˆæ¯ï¼Œè¿™é‡Œçš„å¯ç”¨è¦å†æ€è€ƒä¸‹å«ä¹‰ï¼‰ï¼Œbrokerç­‰å¾…maxInactivityDurationæ—¶é—´
+    åŽè¿˜æœªæ”¶åˆ°æ¶ˆæ¯ï¼Œå°†ä¸»åŠ¨å…³é—­è¯¥è¿žæŽ¥,è¿™æ—¶å¯¼è‡´æ¶ˆæ¯ä¸¢å¤±ã€‚
 
-²Î¿¼ÎÄÕÂ£ºhttp://activemq.apache.org/slow-networks-drop-large-messages.html
+å‚è€ƒæ–‡ç« ï¼šhttp://activemq.apache.org/slow-networks-drop-large-messages.html
 

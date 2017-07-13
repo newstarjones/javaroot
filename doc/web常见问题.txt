@@ -1,26 +1,26 @@
-�������ύ��ʽ
+防表单提交方式
 http://www.vaikan.com/prevent-duplicate-form-submission/
-	�����ύ��ť
-	Post/Redirect/Get (PRG)ģʽ
-	��session�д��һ�������־
-	�����ݿ�������Լ��
+	禁掉提交按钮
+	Post/Redirect/Get (PRG)模式
+	在session中存放一个特殊标志
+	在数据库里添加约束
 http://www.bkjia.com/jingyan/471187.html
 
-session�ٳ�
+-----------------------------------------------------
+session 劫持
+	采用和表单防重复提交一样，加入一个token
+	设置httponly=true，放置XSS攻击读取
+	间隔性生成sessionId
+最佳方案是使用HTTPS
 https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/06.4.md
 
-redis��
-�������ͷ����Redisʵս���鼰ʹ�ó���
-http://www.chinacloud.cn/show.aspx?id=13650&cid=11
-Redis����̸RedisӦ�ó���
-http://blog.nosqlfan.com/html/2235.html
-RedisӦ�ó���
-http://www.scienjus.com/redis-use-case/
-Redis �� 5 ������ʹ�ó���
-http://blog.jobbole.com/88383/
-���а�ʵ��
-http://yijiebuyi.com/blog/9c465aa25ef6d45c162ce1e555fc0e6c.html
+-----------------------------------------------------
+HTTPS
+根子上是SSL/TLS协议
+（1） 客户端向服务器端索要并验证公钥。 // 如何保证公钥安全性：将公钥放在数字证书中。只要证书是可信的，公钥就是可信的
+（2） 双方协商生成"对话密钥"。//为什么采用对话秘钥，采用对话秘钥比直接使用公钥加密的数据更高效
+（3） 双方采用"对话密钥"进行加密通信。
+(1)(2)可以理解是建立SSL/TLS的握手阶段，需要4次交互 // 注意 这里的的握手是在tcp的三次握手建立之后的事情。
 
+参考 https://www.oschina.net/translate/understanding-https-protocol
 
-HTTPSЭ��
-https://www.oschina.net/translate/understanding-https-protocol

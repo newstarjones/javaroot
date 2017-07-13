@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * ÂìÒÏ½ğ·ş·ç¿Ø²¿ ÃæÊÔÌâ
- * ÏÂÃæµÄ½â·¨ÊÇ´íÎóµÄ
+ * èš‚èšé‡‘æœé£æ§éƒ¨ é¢è¯•é¢˜
+ * ä¸‹é¢çš„è§£æ³•æ˜¯é”™è¯¯çš„
  * @author Administrator
  *
  */
@@ -16,7 +16,7 @@ public class AliMianShiMain {
 	public static void main(String[] args) {
 	}
 }
-//	public static Map map = new HashMap(); // Õâ¸ömap·ÅÈëËùÓĞ1-a 2-b .. 26-z µÄÓ³Éä
+//	public static Map map = new HashMap(); // è¿™ä¸ªmapæ”¾å…¥æ‰€æœ‰1-a 2-b .. 26-z çš„æ˜ å°„
 //	public static List list = new ArrayList();
 //	static {
 //		for(int i=1; i<=26; i++) {
@@ -29,7 +29,7 @@ public class AliMianShiMain {
 //
 //	public static void main(String[] args) {
 //
-//		String str1 = "123"; // ÈÎÒâÊı×Ö×éºÏ
+//		String str1 = "123"; // ä»»æ„æ•°å­—ç»„åˆ
 //		// set = {1,..26}
 //		long result = 0;
 //

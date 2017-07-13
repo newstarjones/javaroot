@@ -1,0 +1,15 @@
+rocketmq(转apache孵化前的最后master版本) runserver.sh 调优参数解读
+-XX:+UseConcMarkSweepGC //指新生代采用ParNew，老年代采用CMS+Serial Old方式进行GC
+-XX:+UseCMSCompactAtFullCollection // 每次CMS垃圾收集后进行一次碎片整理，仅在启用CMS后有效
+-XX:CMSInitiatingOccupancyFraction=70 // 第一次CMS垃圾收集会在老年代被占用70%时被触发
+-XX:+CMSParallelRemarkEnabled // 降低标记停顿时间
+-XX:SoftRefLRUPolicyMSPerMB=0 // 软引用回收策略，设置为0表示在系统进行回收时不等待，直接回收
+-XX:+CMSClassUnloadingEnabled // 激活持久代的类卸载(比如spring hibernate中大量生成的代理类可能要进行回收)  
+// 参考：http://guoli0813.blog.51cto.com/623863/303035
+-XX:SurvivorRatio=8 
+-XX:+DisableExplicitGC // 不允许在程序内部进行GC(如System.gc())，GC动作只能有JVM触发
+
+
+ref:
+http://www.javaworld.com/article/2078623/core-java/jvm-performance-optimization-part-1-a-jvm-technology-primer.html
+https://www.ibm.com/developerworks/cn/java/j-lo-jvm-optimize-experience/index.html

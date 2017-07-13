@@ -1,0 +1,78 @@
+
+虚拟机常用优化参数详细
+-server and -client
+	两种类型的 HotSpot JVM，即”server”和”client”
+    服务端的VM中的默认为堆提供了一个更大的空间以及一个并行的垃圾收集器，并且在运行时可以更大程度地优化代码。
+	客户端的VM更加保守一些（校对注：这里作者指客户端虚拟机有较小的默认堆大小），这样可以缩短JVM的启动时间和占用更少的内存。
+	在一个32位的系统上，HotSpot JDK可以运行服务端VM，但是32位的JRE只能运行客户端VM。
+
+-version and -showversion
+	区别在于-showversion不影响JVM的启动
+
+-Xint, -Xcomp, 和 -Xmixed
+	
+
+-XX:+PrintCommandLineFlags  // 打印所有用户设置的参数
+-XX:+PrintFlagsFinal  输出所有XX参数和值
+-XX:+PrintFlagsInitial
+java -client -XX:+PrintFlagsFinal Benchmark
+[Global flags]
+uintx AdaptivePermSizeWeight               = 20               {product}
+第一列表示参数的数据类型，第二列是名称，第四列为值，第五列是参数的类别。
+第三列”=”表示第四列是参数的默认值，而”:=” 表明了参数被用户或者JVM赋值了。
+
+jinfo命令也可以用来查询参数
+	
+	问题：如何获取当前参数的设置值
+	
+	
+内存调优
+	-Xms and -Xmx (or: -XX:InitialHeapSize and -XX:MaxHeapSize)
+	java -Xms128m -Xmx2g MyApp
+	java -XX:InitialHeapSize=128m -XX:MaxHeapSize=2g MyApp
+
+	-XX:+HeapDumpOnOutOfMemoryError and -XX:HeapDumpPath
+	默认情况下，堆内存快照会保存在JVM的启动目录下名为java_pid<pid>.hprof 的文件里（在这里<pid>就是JVM进程的进程号）。
+	也可以通过设置-XX:HeapDumpPath=<path>来改变默认的堆内存快照生成路径，<path>可以是相对或者绝对路径。
+	// 建议转储文件放到一个足够空间的磁盘上，因为往往会很大
+
+-XX:OnOutOfMemoryError  // 发生内存溢出时执行一些指令
+	
+	java -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/heapdump.hprof -XX:OnOutOfMemoryError ="sh ~/cleanup.sh" MyApp
+	
+-XX:PermSize and -XX:MaxPermSize
+	java -XX:PermSize=128m -XX:MaxPermSize=256m MyApp
+	这里设置的永久代大小并不会被包括在使用参数-XX:MaxHeapSize 设置的堆内存大小中
+ 
+-XX:InitialCodeCacheSize and -XX:ReservedCodeCacheSize
+	JVM一个有趣的，但往往被忽视的内存区域是“代码缓存”，它是用来存储已编译方法生成的本地代码
+	如果代码缓存被占满，JVM会打印出一条警告消息，并切换到interpreted-only 模式：JIT编译器被停用，字节码将不再会被编译成机器码。因此，应用程序将继续运行，但运行速度会降低一个数量级，直到有人注意到这个问题
+-XX:+UseCodeCacheFlushing
+	当代码缓存被填满时让JVM放弃一些编译代码。
+	至少可以避免当代码缓存被填满的时候JVM切换到interpreted-only 模式。不过，我仍建议尽快解决代码缓存问题发生的根本原因，如找出内存泄漏并修复它。
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+新生代垃圾回收
+	新生代算法 复制
+	老年代算法 标记清除 标记整理
+	
+-XX:NewSize and -XX:MaxNewSize
+ NewSize不允许比老年代大，因为gc最坏情况下，新生代全部进入老年代导致OOM
+ MaxNewSize可以设置为-Xmx/2
+ 
+ 
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+吞吐量(throughput) : 指应用程序线程用时占程序总用时的比例  // Parallel Scavenge收集器  
+	
+暂停时间(pause times) : 指一个时间段内应用程序线程让与GC线程执行而完全暂停  //提高响应能力，在互联网或B/S系统上都应该使用该收集器
+	// CMS收集器	
+
+实践上：
+	收集器组合： 新生代：ParNew    // -XX:ParallelGCThreads 线程数 
+	老年代：CMS
+
+	

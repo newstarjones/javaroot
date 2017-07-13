@@ -4,9 +4,9 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * A B C ÈıÏß³ÌÂÖÁ÷Ö´ĞĞÎÊÌâ.
+ * A B C ä¸‰çº¿ç¨‹è½®æµæ‰§è¡Œé—®é¢˜.
  * 
- * »¹Ò»¸öÏë·¨£º Ê¹ÓÃ join±£Ö¤ABCË³Ğò£¬È»ºóABC Í¬²½Ò»¸öMAP£¬MAPÀï·ÅÖÃÁËABCµÄÖ´ĞĞ×´Ì¬, 0 Î´Ö´ĞĞ£¬ 1 ±íÊ¾Ö´ĞĞ
+ * è¿˜ä¸€ä¸ªæƒ³æ³•ï¼š ä½¿ç”¨ joinä¿è¯ABCé¡ºåºï¼Œç„¶åABC åŒæ­¥ä¸€ä¸ªMAPï¼ŒMAPé‡Œæ”¾ç½®äº†ABCçš„æ‰§è¡ŒçŠ¶æ€, 0 æœªæ‰§è¡Œï¼Œ 1 è¡¨ç¤ºæ‰§è¡Œ
  * 
  * @author Administrator
  *
@@ -82,7 +82,7 @@ public class A_B_C_Threads {
 		B.start();
 		C.start();
 		
-		// Ö÷Ïß³Ì´¥·¢AÏß³ÌµÄÔËĞĞ.
+		// ä¸»çº¿ç¨‹è§¦å‘Açº¿ç¨‹çš„è¿è¡Œ.
 		lock.lock();
 		try {
 			c.signal();

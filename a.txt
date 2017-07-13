@@ -1,40 +1,40 @@
-ehcache��hibernate�е��÷�
-java�������ʽ��ʵ��
-rocketmqʵ����Ϣ˳����
+ehcache在hibernate中的用法
+java正则表达式的实现
+rocketmq实现消息顺序性
 https://www.zhihu.com/question/30195969
-10����rocketmq
+10分钟rocketmq
 http://jm.taobao.org/2017/01/12/rocketmq-quick-start-in-10-minutes/
-������Դ֧�ֵ�ʵ��
-slf4j�͸�����־��ܵļ��ɣ�
-ibatis��spring�ļ���
-ע�����ݿ�������ʵ�ֻ��ƣ�
+多数据源支持的实现
+slf4j和各种日志框架的集成？
+ibatis和spring的集成
+注册数据库驱动的实现机制？
 
-zkѡ���㷨
-binlog��mysql�ĸ���
+zk选举算法
+binlog和mysql的复制
 
 
-����������
-	1 ��д���Ȳ�������ʵ�ֻ���
-	2 junit��ܷ���
-	3 mysql�ļ������ƣ�
+上午主攻：
+	1 读写锁等并发包的实现机制
+	2 junit框架分析
+	3 mysql的加锁机制？
 	
 	
-���˼���������ʲô���������Դ���������⣿
-	1 ���첢��ģ�ͣ�ʹ��Actor�ķ�ʽ���⾺��
-	2 ��������ͬ������
+除了加锁，还有什么方法解决资源竞争的问题？
+	1 改造并发模型，使用Actor的方式避免竞争
+	2 非阻塞的同步机制
 	
-spring��ȱ���ǣ�
+spring的缺点是？
 
-��μ����������л���	
-	���ٻ��������ʹ��
-	�����̵߳Ĺ�ģ
+如何减少上下文切换？	
+	减少或避免锁的使用
+	控制线程的规模
 
-ΪʲôҪʹ��Spring��
+为什么要使用Spring？
 
-���������ʵ�ֵģ�
+事务是如何实现的？
 	
-��α�֤�ֲ�ʽ�����һ����
-	1. ��ֲܷ�ʽ���񡪡�ҵ������
-		���漰�ֲ�ʽ�����ҵ�����ϵ�һ���������ʹ�÷ֲ�ʽ����ϵͳ��չ��Ŀ����Υ��
+如何保证分布式事务的一致性
+	1. 规避分布式事务——业务整合
+		把涉及分布式事务的业务整合到一起，这和我们使用分布式进行系统扩展的目的相违背
 	
 	

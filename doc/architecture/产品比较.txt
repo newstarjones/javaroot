@@ -1,0 +1,3 @@
+缓存框架比较
+memcached redis ehcache	
+

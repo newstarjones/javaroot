@@ -5,8 +5,8 @@ import java.nio.charset.Charset;
 public class UnicodeMain {
 
 	public static void main(String[] args) throws Exception {
-		String s = "Ë¼¿¼";
-		System.out.println("µ±Ç°ĞéÄâ»úÊµÀıµÄÄ¬ÈÏ×Ö·û±àÂë£º" + Charset.defaultCharset());
+		String s = "æ€è€ƒ";
+		System.out.println("å½“å‰è™šæ‹Ÿæœºå®ä¾‹çš„é»˜è®¤å­—ç¬¦ç¼–ç ï¼š" + Charset.defaultCharset());
 	}
 
 }

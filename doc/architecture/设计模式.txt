@@ -1,0 +1,8 @@
+桥接模式
+	将抽象部分和实现部分分离，使他们可以独立变化.
+
+JDBC 个人理解 //不确定理解是否正确
+	DriverManager.getConnection 是抽象部分
+	而java.sql.Driver和其实现类是实现部分
+	Driver的变化不会影响到DriverManager的连接获取动作.
+

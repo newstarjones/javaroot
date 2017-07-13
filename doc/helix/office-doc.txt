@@ -1,43 +1,43 @@
 State Machine and Transition
 
-¸ø¶¨Ò»¸öidealstate£¬helix¸ºÔğÈ·±£¼¯Èº´ï³É¸Ã×´Ì¬¡£helix controller¶ÁÈ¡idealstate£¬ÃüÁîÃ¿Ò»¸öparticipant²ÉÈ¡ÊÊµ±¶¯×÷ÒÔ´ïµ½ÀíÏë×´Ì¬¡£ÕâĞ©¶¯×÷³ÆÎªtransition¡£
-finite state machine ÓĞÏŞ×´Ì¬»ú
-Ã¿¸ö×ÊÔ´¹ØÁªÒ»¸ö×´Ì¬»ú£¬Òò´ËÒ»¸ö¼¯ÈºÖĞ¿ÉÒÔ¹ÜÀí¶àÖÖ×ÊÔ´¡£
-state ÃèÊöreplicaµÄ½ÇÉ«£¬master»¹ÊÇslave
-transition ¶¯×÷£¬Ê¹µÃreplicaµÄ½ÇÉ«·¢Éú¸Ä±ä
-current state µ±Ç°²ÎÓë½Úµã(participant)ÉÏËùÓĞ×ÊÔ´µÄÊµ¼Ê×´Ì¬
-spectator ÅÔ¹ÛÕß£¬¹ÛÖÚ
-Rebalancer ÖØĞÂÆ½ºâ
-HelixµÄController£¬ÔÚÃ¿Ò»´Î·¢Éú¼¯ÈºÊÂ¼şÊ±£¬¶¼»á½øĞĞRebalance¡£
-the system is considered stable which implies 'IdealState = CurrentState = ExternalView'¡£
+ç»™å®šä¸€ä¸ªidealstateï¼Œhelixè´Ÿè´£ç¡®ä¿é›†ç¾¤è¾¾æˆè¯¥çŠ¶æ€ã€‚helix controllerè¯»å–idealstateï¼Œå‘½ä»¤æ¯ä¸€ä¸ªparticipanté‡‡å–é€‚å½“åŠ¨ä½œä»¥è¾¾åˆ°ç†æƒ³çŠ¶æ€ã€‚è¿™äº›åŠ¨ä½œç§°ä¸ºtransitionã€‚
+finite state machine æœ‰é™çŠ¶æ€æœº
+æ¯ä¸ªèµ„æºå…³è”ä¸€ä¸ªçŠ¶æ€æœºï¼Œå› æ­¤ä¸€ä¸ªé›†ç¾¤ä¸­å¯ä»¥ç®¡ç†å¤šç§èµ„æºã€‚
+state æè¿°replicaçš„è§’è‰²ï¼Œmasterè¿˜æ˜¯slave
+transition åŠ¨ä½œï¼Œä½¿å¾—replicaçš„è§’è‰²å‘ç”Ÿæ”¹å˜
+current state å½“å‰å‚ä¸èŠ‚ç‚¹(participant)ä¸Šæ‰€æœ‰èµ„æºçš„å®é™…çŠ¶æ€
+spectator æ—è§‚è€…ï¼Œè§‚ä¼—
+Rebalancer é‡æ–°å¹³è¡¡
+Helixçš„Controllerï¼Œåœ¨æ¯ä¸€æ¬¡å‘ç”Ÿé›†ç¾¤äº‹ä»¶æ—¶ï¼Œéƒ½ä¼šè¿›è¡ŒRebalanceã€‚
+the system is considered stable which implies 'IdealState = CurrentState = ExternalView'ã€‚
 
 
 Dynamic IdealState
-ideal StateÒ²ÊÇ¿ÉÒÔ¶¯Ì¬µ÷ÕûµÄ
+ideal Stateä¹Ÿæ˜¯å¯ä»¥åŠ¨æ€è°ƒæ•´çš„
 
 ----------------------Helix architecture-----------------------
-Helix ½«½Úµã·ÖÎª3Àà£ºparticipant spectator controller
-cluster state metadata store Ê¹ÓÃzk
+Helix å°†èŠ‚ç‚¹åˆ†ä¸º3ç±»ï¼šparticipant spectator controller
+cluster state metadata store ä½¿ç”¨zk
 
 http://stackoverflow.com/questions/16401412/apache-helix-vs-yarn
 
 
 
-state model ×´Ì¬Ä£ĞÍ£º  ÔÚÒ»¸öhelix¼¯ÈºÖĞ£¬¿ÉÒÔ´æÔÚ¶à¸östate model¡£Ã¿Ò»¸ö×ÊÔ´¶¼ÒªÅäÖÃÒ»¸östate modelÒÔ¹ÜÀíËûÃÇµÄideal state.
-Èı¸ö×î³£¼ûµÄ×´Ì¬Ä£ĞÍ£º
+state model çŠ¶æ€æ¨¡å‹ï¼š  åœ¨ä¸€ä¸ªhelixé›†ç¾¤ä¸­ï¼Œå¯ä»¥å­˜åœ¨å¤šä¸ªstate modelã€‚æ¯ä¸€ä¸ªèµ„æºéƒ½è¦é…ç½®ä¸€ä¸ªstate modelä»¥ç®¡ç†ä»–ä»¬çš„ideal state.
+ä¸‰ä¸ªæœ€å¸¸è§çš„çŠ¶æ€æ¨¡å‹ï¼š
 mater-slave
 online-offline
 leader-standby
 
-helix architecture helix ¼Ü¹¹
+helix architecture helix æ¶æ„
 why: 
-what£º ¹ÜÀí¼¯ÈºÖĞµÄ¸÷ÖÖ×é¼ş.Ìá¹©Ò»ÖÖ»úÖÆĞ­µ÷¼¯ÈºÖĞµÄ¸÷¸önodeºÍcomponent.  ·´Ó³¼¯ÈºÖĞµÄ¸÷ÖÖ±ä»¯£¬ĞÎ³ÉÒ»ÏµÁĞ¿ÉÒÔÊ¹¼¯Èº´ïµ½ÎÈ¶¨×´Ì¬µÄÈÎÎñ£¬ÕâĞ©ÈÎÎñ½«·ÖÅäµ½¼¯ÈºµÄ¸÷¸önode.
+whatï¼š ç®¡ç†é›†ç¾¤ä¸­çš„å„ç§ç»„ä»¶.æä¾›ä¸€ç§æœºåˆ¶åè°ƒé›†ç¾¤ä¸­çš„å„ä¸ªnodeå’Œcomponent.  åæ˜ é›†ç¾¤ä¸­çš„å„ç§å˜åŒ–ï¼Œå½¢æˆä¸€ç³»åˆ—å¯ä»¥ä½¿é›†ç¾¤è¾¾åˆ°ç¨³å®šçŠ¶æ€çš„ä»»åŠ¡ï¼Œè¿™äº›ä»»åŠ¡å°†åˆ†é…åˆ°é›†ç¾¤çš„å„ä¸ªnode.
 how: 
 
-role ½ÇÉ«
-participant // hosting ×ÊÔ´
-spectator // »ñÈ¡current state Ö÷Òª½øĞĞrequest route
-controller // ¸ºÔğºËĞÄµÄĞ­µ÷¹¦ÄÜ
+role è§’è‰²
+participant // hosting èµ„æº
+spectator // è·å–current state ä¸»è¦è¿›è¡Œrequest route
+controller // è´Ÿè´£æ ¸å¿ƒçš„åè°ƒåŠŸèƒ½
 
-Ã¿¸ö·ÖÇøÒ»¸östate£¬Ã¿Ò»¸östateÒ»¸öconstrain£¨constrainÀí½â£º±ÈÈç£¬³ÉÎªÒ»¸öMASTER×´Ì¬Ç°Ò»¸ö×´Ì¬±ØĞëÊÇSLAVE£©
-²»½øÃ¿Ò»¸östateÓĞconstrain£¬Ã¿Ò»¸ötransition¶¼ÓĞconstrain
+æ¯ä¸ªåˆ†åŒºä¸€ä¸ªstateï¼Œæ¯ä¸€ä¸ªstateä¸€ä¸ªconstrainï¼ˆconstrainç†è§£ï¼šæ¯”å¦‚ï¼Œæˆä¸ºä¸€ä¸ªMASTERçŠ¶æ€å‰ä¸€ä¸ªçŠ¶æ€å¿…é¡»æ˜¯SLAVEï¼‰
+ä¸è¿›æ¯ä¸€ä¸ªstateæœ‰constrainï¼Œæ¯ä¸€ä¸ªtransitionéƒ½æœ‰constrain

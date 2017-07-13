@@ -1,1 +1,1 @@
-TreeMap内部采用红黑树实现，性能为O(lg(n))
+TreeMap鍐呴儴閲囩敤绾㈤粦鏍戝疄鐜帮紝鎬ц兘涓篛(lg(n))

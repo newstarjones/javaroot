@@ -3,14 +3,14 @@ package com.hello.javaroot.concurrenty;
 import java.util.concurrent.locks.LockSupport;
 
 /**
- * 1GÈÕÖ¾ÎÄ¼ş£¬Ã¿ĞĞ´óĞ¡17K£¬ÄÚ´æ1M£¬ÇëÍ³¼Æ³öÏÖ´ÎÊıÅÅÃûÇ°3µÄ´Ê
+ * 1Gæ—¥å¿—æ–‡ä»¶ï¼Œæ¯è¡Œå¤§å°17Kï¼Œå†…å­˜1Mï¼Œè¯·ç»Ÿè®¡å‡ºç°æ¬¡æ•°æ’åå‰3çš„è¯
  * 
  * @author Administrator
  *
  */
 public class BigFileParse1G {
 
-	// 1G·ÖÎª 1024µÄ1MµÄÄÚ´æ¶Î 
+	// 1Gåˆ†ä¸º 1024çš„1Mçš„å†…å­˜æ®µ 
 	
 	public static void main(String[] args) {
 		int a ;

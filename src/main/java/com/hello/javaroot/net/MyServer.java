@@ -10,7 +10,7 @@ import java.nio.channels.SocketChannel;
 import java.util.Set;
 
 /**
- * ²Î¿¼page139
+ * å‚è€ƒpage139
  * 
  * @author Administrator
  *
@@ -44,7 +44,7 @@ public class MyServer {
 						if(k.isReadable()) {
 							SocketChannel channel = (SocketChannel)k.channel();
 							ByteBuffer buf = (ByteBuffer)k.attachment();
-							int count = channel.read(buf);  // ×¢ÒâÕâÀïµÄchannelµÄÊı¾İ¶ÁÈ¡·½Ê½
+							int count = channel.read(buf);  // æ³¨æ„è¿™é‡Œçš„channelçš„æ•°æ®è¯»å–æ–¹å¼
 							if(count < 0) {
 								
 							}

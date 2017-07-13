@@ -1,0 +1,30 @@
+redis：
+国内外巨头分享Redis实战经验及使用场景
+http://www.chinacloud.cn/show.aspx?id=13650&cid=11
+Redis作者谈Redis应用场景
+http://blog.nosqlfan.com/html/2235.html
+Redis应用场景
+http://www.scienjus.com/redis-use-case/
+Redis 的 5 个常见使用场景
+http://blog.jobbole.com/88383/
+排行榜实现
+// 利用有序集合实现	
+// http://yijiebuyi.com/blog/9c465aa25ef6d45c162ce1e555fc0e6c.html
+zrangebyscore (升序排列)      zrevrangebyscore (倒序排列)
+
+过期命令
+// 优惠券过期自动删除   //不在redis中就认为是过期的
+expire key ttl (ttl以秒为单位)
+
+分布式锁实现
+set key "lock" EX 1 XX
+	EX 1 表示锁1s超时，1秒后自动释放
+	若返回false，表示当前锁被占用，无法创建锁
+	
+
+save // redis会阻塞住所有请求
+bgsave  //fork自身, child进程会进入save的处理方式，但是服务器内存要有一半的冗余才可以
+aof // 
+
+
+-------------算法和数据结构--------------------

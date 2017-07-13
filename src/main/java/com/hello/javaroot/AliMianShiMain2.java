@@ -5,11 +5,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//·Ö²¼Ê½ÊÂÎñ
+//åˆ†å¸ƒå¼äº‹åŠ¡
 //http://www.infoq.com/cn/articles/solution-of-distributed-system-transaction-consistency
 //http://weibo.com/ttarticle/p/show?id=2309403965965003062676/*
 /**
- * ÂìÒÏ½ğ·ş·ç¿Ø²¿ ÃæÊÔÌâ
+ * èš‚èšé‡‘æœé£æ§éƒ¨ é¢è¯•é¢˜
  * @author Administrator
  *
  */
