@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 public class ExecuteInSpecifiedTime {
 	// 开启多少个子线程
 	private static final int THREAD_COUNT = 2;
-	private static final int THREAD_TIMEOUT = 5;
+	private static final int THREAD_TIMEOUT = 2;
 
 	public static void main(String[] args) {
 		way1();
@@ -32,7 +32,7 @@ public class ExecuteInSpecifiedTime {
 			@Override
 			public List<String> call() throws Exception {
 				boolean flag = true;
-				while(flag) {
+				while(!Thread.interrupted() && flag) {
 					
 				}
 				return null;
@@ -41,6 +41,8 @@ public class ExecuteInSpecifiedTime {
 		};
 		pool.submit(c1);
 		try {
+			// TODO 无法关闭死循环的线程? 
+						// 需要在代码里设置一定的关闭策略
 			boolean result = pool.awaitTermination(THREAD_TIMEOUT, TimeUnit.SECONDS);
 			if(result) {
 				// 执行完毕 交由主线程执行
@@ -48,10 +50,9 @@ public class ExecuteInSpecifiedTime {
 				c1.call();
 			}
 			else {
-				System.out.println("Sub Thread can not execute in "+ THREAD_TIMEOUT + " s ...");
+				System.out.println("Sub Thread can not complete execute in "+ THREAD_TIMEOUT + " s ...");
 			}
-			// TODO 无法关闭死循环的线程
-			pool.shutdownNow();
+			pool.shutdown();
 		} catch (Exception e) {
 			// 100s还没执行完
 			e.printStackTrace();
